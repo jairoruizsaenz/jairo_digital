@@ -30,6 +30,26 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+
+
+
+
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -38,6 +58,9 @@
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
+        <!-- <div class="fa-3x">
+            <i class="fas fa-spinner fa-pulse" style="color: #6244C5;" role="status"></i>
+        </div> -->
     </div>
     <!-- Spinner End -->
 
@@ -76,12 +99,14 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h2 class="text-primary mb-3">I'm</h2>
+                    <h2 class="text-primary mb-3">Hello, I'm</h2>
                     <h1 class="display-3 mb-3">Jairo Ruiz Saenz</h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Web Applications Developer, Front End Developer</div>
+                    <div class="typed-text d-none">Web Applications Developer, Front End Developer, Data Visualization, Python, Django</div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="https://github.com/jairoruizsaenz/jairoruizsaenz.github.io/raw/master/files/CV_Ruiz%20Saenz%2CJairo__en.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                        <a href="https://github.com/jairoruizsaenz/jairoruizsaenz.github.io/raw/master/files/CV_Ruiz%20Saenz%2CJairo__en.pdf" class="btn btn-primary py-3 px-4 me-2">Download CV</a>
+                        <a href="https://github.com/jairoruizsaenz" class="btn btn-primary py-3 px-4 me-2"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/jairoruizsaenz/" class="btn btn-primary py-3 px-4 me-2"><i class="fab fa-linkedin-in fa-lg"></i></a>
                         <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -96,7 +121,6 @@
         </div>
     </div>
     <!-- Header End -->
-
 
     <!-- Video Modal Start -->
     <div class="modal modal-video bg-light fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -164,6 +188,28 @@
     </div>
     <!-- About End -->
 
+    <!-- Tech carrousel Start -->
+    <!-- https://www.solodev.com/blog/web-design/how-to-add-an-infinite-client-logo-carousel-to-your-website.stml -->
+    <div class="container-fluid bg-light my-5" id="tech">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Tech</h1>
+            <div class="row justify-content-center">             
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.5s">
+                    <section class="logo-carousel slider" data-arrows="true">
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png"></div>
+                        <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tech carrousel End -->
 
     <!-- Expertise Start -->
     <div class="container-xxl py-6 pb-5" id="skill">
@@ -204,6 +250,15 @@
                             </div>
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Bootstrap</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">GitHub</h6>
                                     <h6 class="font-weight-bold">85%</h6>
                                 </div>
@@ -225,6 +280,15 @@
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">Data visualization</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">D3.js</h6>
                                     <h6 class="font-weight-bold">95%</h6>
                                 </div>
                                 <div class="progress">
@@ -261,18 +325,18 @@
                                     <h6 class="font-weight-bold">Native</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                            </div>                        
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="skill mb-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">English</h6>
-                                    <h6 class="font-weight-bold">110/120 TOEFL</h6>
+                                    <h6 class="font-weight-bold">110/120 TOEFL (April 2022)</h6>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -332,6 +396,12 @@
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row gy-5 gx-4">
                                 <div class="col-sm-6">
+                                    <h5>Data Science (Course)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2021 - 2021</p>
+                                    <h6 class="mb-0">Correlation One - MinTIC</h6>
+                                </div>
+                                <div class="col-sm-6">
                                     <h5>Information Engineering (MS)</h5>
                                     <hr class="text-primary my-2">
                                     <p class="text-primary mb-1">2017 - 2019</p>
@@ -357,69 +427,6 @@
         </div>
     </div>
     <!-- Expertise End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid bg-light my-5 py-6" id="service">
-        <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Services</h1>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Creative Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code-branch fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Graphic Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Web Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
 
 
     <!-- Projects Start -->
@@ -505,19 +512,40 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item text-center">
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <div class="mb-3">
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                            </div>
+                            <p class="fs-5 fst-italic">Excellent developer- very easy to work with and very, very good at his craft. Highly recommended.</p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
                         </div>
                         <div class="testimonial-item text-center">
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <div class="mb-3">
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                            </div>
+                            <p class="fs-5 fst-italic">Excellent work and very professional, will go far above your expectations and above all else he is also super fast when it comes to job completion.</p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
                         </div>
                         <div class="testimonial-item text-center">
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <div class="mb-3">
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                                <i class="fas fa-star fa-lg" style="color: #FFC448;"></i>
+                            </div>
+                            <p class="fs-5 fst-italic">Jairo is excellent in his craft. He is also patient and willing to go the extra mile so just you can effectively use what he created for you. He gives true value through his work.</p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
@@ -545,25 +573,25 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" name="entry.10721305" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" name="entry.10721305" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="entry.147427237" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" name="entry.147427237" placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" name="entry.1914480256" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="entry.1914480256" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="entry.1216358237" style="height: 150px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="entry.1216358237" style="height: 150px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -584,7 +612,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">Jairo Ruiz</a>, All Right Reserved.
+                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="https://github.com/jairoruizsaenz" style="color:white;"><i class="fab fa-github fa-2x mx-3"></i></a>
+                        <a href="https://www.linkedin.com/in/jairoruizsaenz/" style="color:white;"><i class="fab fa-linkedin-in fa-2x mx-3"></i></a>
                     </div>
                 </div>
             </div>
@@ -606,6 +638,9 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
@@ -617,6 +652,32 @@
             $('#gform').prepend("Thank you for contacting me, I'll send you an email soon.");
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+        $('.logo-carousel').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+            }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 2
+            }
+            }]
+        });
+        });
+    </script>
+
 </body>
 
 </html>
