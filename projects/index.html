@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>It's me, Jairo</title>
-</head>
-<body>
-
-    <h1>Hello</h1>
-    <h2>Projects</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sunt illo animi iure nam? Ipsam dicta magni consectetur sint. Eligendi fuga facilis ab delectus minus, necessitatibus iste similique sapiente cumque.</p>
-
-
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">        
+        <title>Redes Películas</title>
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>        
+                
+    </head>
+    <body>        
+        <div class="container">
+            <header>
+            </header>
+            
+            <h1>¿Sabes en que películas aparecen tus actores favoritos?</h1> 
+            <h3>Películas, directores, actores y sus conexiones</h3>
+                    
+            <p class="main-text">                
+                Usando la base de datos de películas disponible en 
+                <a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata" target="_blank">Kaggle</a> junto a información adicional del portal <a href="http://www.imdb.com/" target="_blank">IMDb</a>,
+                 se crea un diagrama de redes, en el que podrás encontrar relaciones entre películas, su director y los actores principales que aparecen en ella.            
+                <br>
+            
+                <li>¿Sábes cuando se lanzaron tus películas favoritas y sus secuelas?</li>
+                <li>¿Conoces los nombres de los actores que conectan diversas películas? </li>
+                <li>Ser actor y director en la misma película, ¿será posible?</li>
+                
+                Podrás aclarar estas y otras pregúntas interactuando con el diagrama de redes.
+            </p>
+            <hr noshade size="1">
+            <div id="button_wrapper">
+                <h4> Seleccione el filtro deseado: </h4>
+                <button type="button" class="btn" id="button_1">Universo Marvel</button>                
+                <button type="button" class="btn" id="button_2">Star Wars</button>
+                <button type="button" class="btn" id="button_3">DC Comics</button>
+                <!--
+                <button type="button" class="btn" id="button_4">Click Me 4!</button>
+                <button type="button" class="btn" id="button_5">Click Me 5!</button>                
+                -->
+            </div>
+                        
+            <svg id="svg" width="1320" height="850" class="grafica"></svg>
+            <script src="resources/js/Force_Directed_Graph_SVG.js"></script> 
+            
+            <p class="main-text">
+            
+            <h4> Datos Interesantes: </h4>
+            <li>Stan Lee, escritor y editor de cómics, creador de muchos de los superheroes del universo marvel, aparece en varias de las películas recientes de marvel. En 14 para ser exactos.</li>
+            <li>Jon Favreau, actúa en Iron Man, Iron Man 2, Iron Man 3 y Spider Man: Homecoming. Pero también fue el director de Iron Man y Iron Man 2.</li>
+            <li>Con el transcurrir de los años, los ratings de las películas en el universo marvel han ido en aumento, al igual que el número de lanzamientos que realizan cada año.</li>
+            
+            
+            <hr noshade size="1">
+            <footer>
+                <p><strong>Películas, directores, actores y sus conexiones</strong> es mantenido por 
+                    <a href="https://github.com/jairoruizsaenz" target="_blank">Jairo Ruiz Saenz</a>  -  
+                    <a href="https://github.com/jairoruizsaenz/Relaciones-Peliculas" target="_blank">Ver Repositorio</a> -
+                       Fecha de actualización: 23/10/2017</p>
+                <p>Publicado con <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>                        
+            </footer>
+        </div>
+    </body>
 </html>
