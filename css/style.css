@@ -522,3 +522,25 @@
         height: 1rem;
     }
 }
+
+/*****************************************/
+/*    Highlight style for <strong> tag   */
+/*****************************************/
+
+.highlighted {
+    position: relative;
+  }
+  
+.highlighted::before {
+    /* Highlight color */
+    background-color: var(--secondary);
+  
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
