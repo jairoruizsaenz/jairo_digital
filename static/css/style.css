@@ -7,6 +7,10 @@
     --dark: #1d3557;
 }
 
+/* {
+    color: #5f6368;
+} */
+
 .bg-light{
     background-color:var(--primary-light) !important
 }
@@ -75,6 +79,11 @@
     height: 48px;
 }
 
+.btn-xl-square {
+    width: 115px;
+    height: 48px;
+}
+
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
@@ -115,7 +124,7 @@
 /*** Header ***/
 #home {
     margin-bottom: 6rem;
-    background: url(../img/bg-header.png) left top no-repeat;
+    /* background: url(../img/bg-header.png) left top no-repeat; */
 }
 
 .typed-cursor {
@@ -293,7 +302,9 @@
     left: 0;
     background: rgba(98, 68, 197, .9);
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-items: flex-end; */
     justify-content: flex-start;
     padding: 30px;
     padding-bottom: 100px !important;
@@ -301,11 +312,10 @@
     transition: .5s;
 }
 
-.portfolio-item:hover .portfolio-btn {
+.portfolio-item:hover .portfolio-btn{
     opacity: 1;
-    padding-bottom: 30px !important;
+    /* padding-bottom: 30px !important; */
 }
-
 
 /*** Team ***/
 .team-item img {
@@ -529,7 +539,7 @@
 
 .highlighted {
     position: relative;
-  }
+}
   
 .highlighted::before {
     /* Highlight color */
@@ -543,4 +553,14 @@
     bottom: 0;
     z-index: -1;
     transform: rotate(-2deg);
-  }
+}
+
+/* .slick-active {
+    border: 1px solid blue;
+    margin-right:auto !important;
+    margin-left:auto !important;
+} */
+
+.white-font {
+    color: white;
+}
