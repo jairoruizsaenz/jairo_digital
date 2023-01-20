@@ -771,6 +771,7 @@
                             </div>
                             <div class="g-recaptcha" data-sitekey="6Ley6hAkAAAAAEL4jHWGzOkl8UW1WvIA8ulbLLzv"></div>
                             <div class="col-12">
+                                <span id="g-recaptcha-error-span" style="color:red;"></span><br><br>
                                 <input class="btn btn-primary py-3 px-5" type="submit" value="Send Message"></input>
                             </div>
                         </div>
@@ -820,13 +821,27 @@
 
     <!-- Template Javascript -->
     <script src="static/js/main.js"></script>
+    
+    <script>
+        function checkRecaptcha() {
+            res = $('#g-recaptcha-response').val();
 
-    <script type="text/javascript">
-        // var submitted=false;
+            if (res == "" || res == undefined || res.length == 0)
+                return false;
+            else
+                return true;
+        }
+
         $('#gform').on('submit', function(e) {
-            $('#gform *').fadeOut(500);
-            $('#gform_title').fadeOut(500);
-            $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+            $("#g-recaptcha-error-span").text("");
+            if(!checkRecaptcha()) {
+                $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                return false;
+            } else {
+                $('#gform *').fadeOut(500);
+                $('#gform_title').fadeOut(500);
+                $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+            }
         });
     </script>
 
