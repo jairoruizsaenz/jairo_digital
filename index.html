@@ -10,6 +10,7 @@
 
         gtag('config', 'G-5FBJRF41J6');
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <meta charset="utf-8">
     <title>Jairo Ruiz Saenz</title>
@@ -740,8 +741,8 @@
             </div>
             <div class="row g-5">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="mb-4">Send me a message and I will answer you as soon as possible.</p>
-                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpOy-ijvlAH4iAUqph2Vt-eZkUbkGdxpr7oK_cAj1LzojGgQ/formResponse?" target="hidden_iframe" autocomplete="off" onsubmit="submitted=true;">
+                    <p id="gform_title" class="mb-4">Send me a message and I will answer you as soon as possible.</p>
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpOy-ijvlAH4iAUqph2Vt-eZkUbkGdxpr7oK_cAj1LzojGgQ/formResponse?" target="hidden_iframe" autocomplete="off" onsubmit="submitted=true;">                        
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -767,6 +768,7 @@
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6Ley6hAkAAAAAEL4jHWGzOkl8UW1WvIA8ulbLLzv"></div>
                             <div class="col-12">
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                             </div>
@@ -821,7 +823,8 @@
         // var submitted=false;
         $('#gform').on('submit', function(e) {
             $('#gform *').fadeOut(1500);
-            $('#gform').prepend("Thank you for contacting me, I'll send you an email soon.");
+            $('#gform_title').fadeOut(1500);
+            $('#gform').append("Thank you for contacting me, I'll send you an email soon.");
         });
     </script>
 
