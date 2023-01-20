@@ -734,17 +734,20 @@
     <!-- <div class="container-xxl pb-5" id="contact"> -->
     <div class="container-fluid pb-5 bg-light" id="contact">
         <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-5 mb-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-12">
                     <h1 class="display-5 mb-0">Let's Work Together</h1>
-                    <span id="g-recaptcha-title-span"></span>
+
+                    <span id="g-recaptcha-title-span" class="pt-2"></span>
+
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <p id="gform_title" class="mb-4">Send me a message and I will answer you as soon as possible.</p>
-                    
-                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpOy-ijvlAH4iAUqph2Vt-eZkUbkGdxpr7oK_cAj1LzojGgQ/formResponse?" method="POST" target="hidden_iframe" autocomplete="on"> <!--onsubmit="submitted=true;"> -->
+
+                    <p id="gform-title" class="mb-4">Send me a message and I will reply to you as soon as possible.</p>
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpOy-ijvlAH4iAUqph2Vt-eZkUbkGdxpr7oK_cAj1LzojGgQ/formResponse?" target="hidden_iframe" autocomplete="on" onsubmit="submitted=false;">
+
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -773,8 +776,7 @@
                             <div class="g-recaptcha" data-sitekey="6Ley6hAkAAAAAEL4jHWGzOkl8UW1WvIA8ulbLLzv"></div>
                             <div class="col-12">
                                 <span id="g-recaptcha-error-span" style="color:red;"></span><br><br>
-                                <input class="btn btn-primary py-3 px-5" type="submit" value="Send Message"></input>
-                                <button class="btn btn-primary py-3 px-5" type="submit" value="Send Message">Send Message_btn</button>
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -790,7 +792,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved.
+                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved. - 12:12am
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <a href="https://github.com/jairoruizsaenz" style="color:white;"><i class="fab fa-github fa-2x mx-3"></i></a>
@@ -832,6 +834,8 @@
                 return true;
         }
 
+    <!-- 
+    <script>
         $('#gform').on('submit', function(e) {
             $("#g-recaptcha-error-span").text("");
             if(!checkRecaptcha()) {
@@ -846,6 +850,40 @@
                 console.log("It should be working");
                 return true;
             }
+        });
+    </script>
+     -->
+
+    <script type="text/javascript">
+        function checkRecaptcha() {
+            res = $('#g-recaptcha-response').val();
+            if (res == "" || res == undefined || res.length == 0)
+                return false;
+            else
+                return true;
+        }
+
+        $('#gform').on('submit', function(e) {
+
+            if(!checkRecaptcha()) {
+                // $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                console.log("Please validate your reCAPTCHA.");
+                // return false;
+            } else {
+                // $('#gform *').fadeOut(1500);
+                // $('#gform_title').fadeOut(1500);
+                // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
+                // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+                console.log("It should be working");
+                // return true;
+            }
+
+            // $('#gform-title').fadeOut(1500);
+            // $('#gform *').fadeOut(1500);            
+            // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
+            console.log('Submited!')
+            // submitted=true;
+            return submitted;
         });
     </script>
 
