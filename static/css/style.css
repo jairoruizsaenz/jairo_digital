@@ -11,6 +11,10 @@
     color: #5f6368;
 } */
 
+.gray-border {
+    border: 1px solid #b3b2b1 !important;
+}
+
 .bg-light{
     background-color:var(--primary-light) !important
 }
