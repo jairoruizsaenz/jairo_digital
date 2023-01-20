@@ -744,8 +744,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-
-                    <p id="gform-title" class="mb-4">Send me a message and I will reply to you as soon as possible.</p>
+                    <p id="gform-title" class="mb-4">Send me a message.</p>
                     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdpOy-ijvlAH4iAUqph2Vt-eZkUbkGdxpr7oK_cAj1LzojGgQ/formResponse?" target="hidden_iframe" autocomplete="on" onsubmit="submitted=false;">
 
                         <div class="row g-3">
@@ -792,7 +791,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved. - 12:12am
+                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved. - 12:25am
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <a href="https://github.com/jairoruizsaenz" style="color:white;"><i class="fab fa-github fa-2x mx-3"></i></a>
@@ -868,23 +867,22 @@
         $('#gform').on('submit', function(e) {
 
             if(!checkRecaptcha()) {
-                // $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
                 console.log("Please validate your reCAPTCHA.");
-                // return false;
+                submitted=false;
             } else {
-                // $('#gform *').fadeOut(1500);
-                // $('#gform_title').fadeOut(1500);
-                // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
-                // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+                $('#gform *').fadeOut(1500);
+                $('#gform_title').fadeOut(1500);
+                $("#g-recaptcha-title-span").text("Thank you for contacting me, I will reply to you as soon as possible.");
                 console.log("It should be working");
-                // return true;
+                submitted=true;
             }
 
             // $('#gform-title').fadeOut(1500);
             // $('#gform *').fadeOut(1500);            
             // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
-            console.log('Submited!')
-            // submitted=true;
+            // console.log('Submited!')
+            
             return submitted;
         });
     </script>
