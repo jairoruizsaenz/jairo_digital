@@ -774,6 +774,7 @@
                             <div class="col-12">
                                 <span id="g-recaptcha-error-span" style="color:red;"></span><br><br>
                                 <input class="btn btn-primary py-3 px-5" type="submit" value="Send Message"></input>
+                                <button class="btn btn-primary py-3 px-5" type="submit" value="Send Message">Send Message_btn</button>
                             </div>
                         </div>
                     </form>
@@ -825,7 +826,6 @@
     <script>
         function checkRecaptcha() {
             res = $('#g-recaptcha-response').val();
-
             if (res == "" || res == undefined || res.length == 0)
                 return false;
             else
@@ -836,12 +836,14 @@
             $("#g-recaptcha-error-span").text("");
             if(!checkRecaptcha()) {
                 $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                console.log("Please validate your reCAPTCHA.");
                 return false;
             } else {
-                $('#gform *').fadeOut(1500);
-                $('#gform_title').fadeOut(1500);
+                // $('#gform *').fadeOut(1500);
+                // $('#gform_title').fadeOut(1500);
                 $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
                 // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+                console.log("It should be working");
                 return true;
             }
         });
