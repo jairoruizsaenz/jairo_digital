@@ -788,7 +788,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved. - 12:40am
+                        <a class="border-bottom text-secondary" href="#">Jairo Ruiz Saenz</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <a href="https://github.com/jairoruizsaenz" style="color:white;"><i class="fab fa-github fa-2x mx-3"></i></a>
@@ -820,37 +820,6 @@
 
     <!-- Template Javascript -->
     <script src="static/js/main.js"></script>
-    
-    <script>
-        function checkRecaptcha() {
-            res = $('#g-recaptcha-response').val();
-            if (res == "" || res == undefined || res.length == 0)
-                return false;
-            else
-                return true;
-        }
-
-
-    </script>
-    <!--
-    <script>
-        $('#gform').on('submit', function(e) {
-            $("#g-recaptcha-error-span").text("");
-            if(!checkRecaptcha()) {
-                $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
-                console.log("Please validate your reCAPTCHA.");
-                return false;
-            } else {
-                // $('#gform *').fadeOut(1500);
-                // $('#gform_title').fadeOut(1500);
-                $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
-                // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
-                console.log("It should be working");
-                return true;
-            }
-        });
-    </script>
-    -->
 
     <script type="text/javascript">
         function checkRecaptcha() {
@@ -866,21 +835,13 @@
             if(!checkRecaptcha()) {
                 // Error
                 $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
-                // console.log("Please validate your reCAPTCHA.");
                 submitted=false;
             } else {
                 // Success
                 $('#gform *').fadeOut(1500);
-                // $('#gform_title').fadeOut(1500);
                 $("#gform-title").text("Thank you for contacting me, I will reply to you as soon as possible.");
                 submitted=true;
-            }
-
-            // $('#gform-title').fadeOut(1500);
-            // $('#gform *').fadeOut(1500);            
-            // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
-            // console.log('Submited!')
-            
+            }            
             return submitted;
         });
     </script>
@@ -921,4 +882,3 @@ NOTE:
 https://store.google.com/es/product/nest_hub_2nd_gen?hl=es&pli=1
 https://www.youtube.com/shorts/d9i68C628Nk
 -->
-
