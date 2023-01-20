@@ -10,6 +10,7 @@
 
         gtag('config', 'G-5FBJRF41J6');
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <meta charset="utf-8">
     <title>Jairo Ruiz Saenz</title>
@@ -768,7 +769,9 @@
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6Ley6hAkAAAAAEL4jHWGzOkl8UW1WvIA8ulbLLzv"></div>
                             <div class="col-12">
+                                <span id="g-recaptcha-error-span" style="color:red;"></span><br><br>
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                             </div>
                         </div>
@@ -818,13 +821,56 @@
     <!-- Template Javascript -->
     <script src="static/js/main.js"></script>
 
-    <script type="text/javascript">
-        // var submitted=false;
+
+    <!-- 
+    <script>
         $('#gform').on('submit', function(e) {
-            $('#gform-title').fadeOut(1500);
-            $('#gform *').fadeOut(1500);            
-            $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
-            submitted=true;
+            $("#g-recaptcha-error-span").text("");
+            if(!checkRecaptcha()) {
+                $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                console.log("Please validate your reCAPTCHA.");
+                return false;
+            } else {
+                // $('#gform *').fadeOut(1500);
+                // $('#gform_title').fadeOut(1500);
+                $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
+                // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+                console.log("It should be working");
+                return true;
+            }
+        });
+    </script>
+     -->
+
+    <script type="text/javascript">
+        function checkRecaptcha() {
+            res = $('#g-recaptcha-response').val();
+            if (res == "" || res == undefined || res.length == 0)
+                return false;
+            else
+                return true;
+        }
+
+        $('#gform').on('submit', function(e) {
+
+            if(!checkRecaptcha()) {
+                // $("#g-recaptcha-error-span").text("Please validate your reCAPTCHA.");
+                console.log("Please validate your reCAPTCHA.");
+                // return false;
+            } else {
+                // $('#gform *').fadeOut(1500);
+                // $('#gform_title').fadeOut(1500);
+                // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
+                // $('#gform_title').prepend("Thank you for contacting me, I'll send you an email soon.");
+                console.log("It should be working");
+                // return true;
+            }
+
+            // $('#gform-title').fadeOut(1500);
+            // $('#gform *').fadeOut(1500);            
+            // $("#g-recaptcha-title-span").text("Thank you for contacting me, I'll send you an email soon.");
+            console.log('Submited!')
+            // submitted=true;
             return submitted;
         });
     </script>
