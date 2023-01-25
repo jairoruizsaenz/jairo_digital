@@ -618,3 +618,8 @@
 .card-img-top {
     border-bottom: 1px solid #dfdfdf;
 }
+
+.project-category {
+    color:var(--primary);
+    font-weight: bold;
+}
